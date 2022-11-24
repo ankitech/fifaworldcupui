@@ -15,7 +15,7 @@ export default class LeaderBoard extends Component {
     componentDidMount() {
         const currentUser = AuthService.getCurrentUser();
 
-        if (!currentUser) this.setState({ redirect: "" });
+        if (!currentUser) this.setState({ redirect: "/" });
         this.setState({ currentUser: currentUser, userReady: true })
         LeaderboardService.getLeaderBoard().then(
           response => {
