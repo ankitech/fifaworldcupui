@@ -5,6 +5,7 @@ const API_URL = 'https://worldcup-fifa22.azuremicroservices.io/';
 
 class UserService {
   getPublicContent() {
+    // return axios.get(API_URL + 'all');
     return axios.get(API_URL + 'users', { headers: authHeader() });
   }
   

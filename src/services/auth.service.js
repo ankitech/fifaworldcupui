@@ -7,6 +7,11 @@ class AuthService {
     const headers = {
       username,
       password,
+      // 'Content-Type': 'application/json;charset=UTF-8',
+      // 'Access-Control-Allow-Origin': '*',
+      // 'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
+      // 'Access-Control-Allow-Headers': '*'
+      'Access-Control-Expose-Headers': 'token'
   };
     return axios
       .post(API_URL + "login",{},{ headers: headers})
@@ -20,8 +25,6 @@ class AuthService {
 
   logout() {
     localStorage.removeItem("user");
-    this.props.router.navigate("/home");
-    window.location.reload();
   }
 
   register(email, firstname, lastname, teamname, password) {
