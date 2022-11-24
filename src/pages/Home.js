@@ -12,21 +12,6 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    // UserService.getAllMatches().then(
-    //   response => {
-    //     this.setState({
-    //       content: response.data
-    //     });
-    //   },
-    //   error => {
-    //     this.setState({
-    //       content:
-    //         (error.response && error.response.data) ||
-    //         error.message ||
-    //         error.toString()
-    //     });
-    //   }
-    // );
   }
 
   render() {
